@@ -23,7 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const botName = 'ChatroomBot';
 
 // Connect to Mongo
-mongo.connect('mongodb://127.0.0.1/', (err, db) => {
+// mongo.connect('mongodb://127.0.0.1/', (err, db) => {
+mongo.connect('mongodb://chatroombaza:slYbSYnjFdbWmX4fJ3YmRNlr2lT8ALLbw7eWGPzc2ZvOLovu4mSl03DCN4R7kzYjGJebmpjqelvUWQj4PaS87A%3D%3D@chatroombaza.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@chatroombaza@', (err, db) => {
   if (err){
     throw err
   }
