@@ -19,6 +19,10 @@ socket.on('roomUsers', ({ room, users }) => {
   outputUsers(users);
 });
 
+socket.on('fromDB', (chat) => {
+  console.log(chat)
+})
+
 // Message from server
 socket.on('message', (message) => {
   console.log(message);
