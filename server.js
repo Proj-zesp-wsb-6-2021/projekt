@@ -1,3 +1,4 @@
+const connectionString = 'mongodb://chat-room-baza-mongodb-accout:sHeS0KcRZ0nEPNAybQqPFtWKFarfz3Iot5oeqx36wBLMkqprrbDPB2EhJit7y8UVLzozQ6l55f3zC6wUi0XcKw==@chat-room-baza-mongodb-accout.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@chat-room-baza-mongodb-accout@'
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -24,7 +25,7 @@ const botName = 'ChatroomBot';
 
 // Connect to Mongo
 // mongo.connect('mongodb://127.0.0.1/', (err, db) => {
-mongo.connect('mongodb://chatroombaza:slYbSYnjFdbWmX4fJ3YmRNlr2lT8ALLbw7eWGPzc2ZvOLovu4mSl03DCN4R7kzYjGJebmpjqelvUWQj4PaS87A%3D%3D@chatroombaza.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@chatroombaza@', (err, db) => {
+mongo.connect(connectionString, (err, db) => {
   if (err){
     throw err
   }
